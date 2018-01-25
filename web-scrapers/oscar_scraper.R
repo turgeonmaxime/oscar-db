@@ -3,14 +3,14 @@
 #   Academy Awards
 #
 # Created:  2017-02-24
-# Modified: 2017-02-26
+# Modified: 2018-01-25
 ########################
 library(rvest)
 library(tidyverse)
 # See http://stackoverflow.com/a/42296675
 
 # Current year-nominees----
-pg <- read_html("https://en.wikipedia.org/wiki/89th_Academy_Awards")
+pg <- read_html("https://en.wikipedia.org/wiki/90th_Academy_Awards")
 
 html_nodes(pg, xpath=".//h2[span/@id = 'Nominees']/following-sibling::table[1]") %>%
   html_nodes("td") %>%
@@ -35,12 +35,12 @@ html_nodes(pg, xpath=".//h2[span/@id = 'Nominees']/following-sibling::table[1]")
     tmp %>%
       mutate(Category = category)
   }) %>% 
-  mutate(Year = "2017") %>%
+  mutate(Year = "2018") %>%
   select(Year, Category, Movie, Nominee) %>% View
 
 
 # Previous year-nominees and winners----
-for (year in 1987:2016) {
+results <- map_df(1987:2017, function(year) {
   award <- year - 1928
   
   if (award %in% c(1, 1 + seq(20, 100, by = 10))) award <- paste0(award, "st")
@@ -91,9 +91,8 @@ for (year in 1987:2016) {
         mutate(Category = category)
     }) %>% 
     mutate(Year = as.character(year)) %>%
-    select(Year, Category, Movie, Nominee, Winner) %>% View
-  
-}
+    select(Year, Category, Movie, Nominee, Winner)
+})
 
 # The web scraper will need to be adapted to different years, because the layout
 # is not consistent throughout
