@@ -25,7 +25,7 @@ oscar_data2016 <- read_html("https://en.wikipedia.org/wiki/89th_Academy_Awards")
                     } else {
                         win <- 1
                     }
-                    data_frame(Movie = movie, Name = nominee[1], Winner = win)
+                    data_frame(Film = movie, Name = nominee[1], Winner = win)
                 })
         } else {
             html_nodes(x, "li") %>%
@@ -37,7 +37,7 @@ oscar_data2016 <- read_html("https://en.wikipedia.org/wiki/89th_Academy_Awards")
                     } else {
                         win <- 1
                     }
-                    data_frame(Movie = movie[1], Name = NA, Winner = win)
+                    data_frame(Film = movie[1], Name = NA, Winner = win)
                 })
         } 
         tmp %>%
