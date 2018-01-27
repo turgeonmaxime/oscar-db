@@ -22,6 +22,6 @@ Below is a list of awards that we would like to include in the database. The ast
   - Satellite Awards
   - Los Angeles Film Critics Association
   - National Board Review (*)
-  - New York Film Critics Circle
+  - New York Film Critics Circle (*)
   - National Society of Film Critics Awards (*)
   
