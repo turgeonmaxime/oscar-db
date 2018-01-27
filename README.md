@@ -23,4 +23,5 @@ Below is a list of awards that we would like to include in the database. The ast
   - Los Angeles Film Critics Association
   - National Board Review
   - New York Film Critics Circle
+  - National Society of Film Critics Awards (*)
   
