@@ -18,7 +18,7 @@ Below is a list of awards that we would like to include in the database. The ast
 ### Secondary
 
   - Critics' Choice Movie Awards
-  - Chicago Film Critics Association
+  - Chicago Film Critics Association (*)
   - Satellite Awards
   - Los Angeles Film Critics Association
   - National Board Review (*)
