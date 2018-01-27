@@ -12,7 +12,7 @@ Below is a list of awards that we would like to include in the database. The ast
   - Directors Guild of America Awards (*)
   - Producers Guild of America Awards (*)
   - Screen Actors Guild Awards (*)
-  - Writers Guild of America Awards 
+  - Writers Guild of America Awards
   - British Academy Film Awards (*)
 
 ### Secondary
@@ -23,3 +23,4 @@ Below is a list of awards that we would like to include in the database. The ast
   - Los Angeles Film Critics Association
   - National Board Review
   - New York Film Critics Circle
+  
