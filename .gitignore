@@ -5,3 +5,6 @@
 *.Rproj
 *database.csv
 cache/*
+results/*
+README.html
+Rplots.pdf
