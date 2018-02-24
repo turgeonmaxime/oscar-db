@@ -192,7 +192,7 @@ exp_supactress <- exp(as.matrix(current_supactress[, colnames(current_supactress
 predict_supactress <- exp_supactress/sum(exp_supactress)
 rownames(predict_supactress) <- current_supactress %>% pull(Name)
 predict_supactress
-round(100 * predict_supactress, 2)
+round(100 * predict_supactress)
 
 # Bootstrap
 n.boot <- 10000

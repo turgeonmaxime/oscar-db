@@ -183,7 +183,7 @@ exp_pic <- exp(as.matrix(current_pic[, colnames(current_pic) %in% pred_pic]) %*%
 predict_pic <- exp_pic/sum(exp_pic)
 rownames(predict_pic) <- current_pic %>% pull(Name)
 predict_pic
-round(100 * predict_pic, 2)
+round(100 * predict_pic)
 
 # Bootstrap
 n.boot <- 10000

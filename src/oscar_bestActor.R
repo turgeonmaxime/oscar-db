@@ -194,7 +194,7 @@ exp_actor <- exp(as.matrix(current_actor[, colnames(current_actor) %in% pred_act
 predict_actor <- exp_actor/sum(exp_actor)
 rownames(predict_actor) <- current_actor %>% pull(Name)
 predict_actor
-round(100 * predict_actor, 2)
+round(100 * predict_actor)
 
 # Bootstrap
 n.boot <- 10000

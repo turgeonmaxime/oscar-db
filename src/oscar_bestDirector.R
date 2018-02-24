@@ -120,7 +120,8 @@ winner_cfca <- data_oscar %>%
 
 data_lafca <- readRDS("cache/lafca_historical.rds") %>% 
     filter(Award == "Director") %>% 
-    mutate(Name = trimws(Name),
+    mutate(Name = str_replace_all(Name, "(\u2020|\u2021|\u00a7)", ""),
+           Name = trimws(Name),
            Name = str_replace_all(Name, "\u00f3", "o"),
            Name = str_replace_all(Name, "\u00f1", "n"),
            Name = str_replace_all(Name, "\u00e1", "a"),
@@ -209,7 +210,7 @@ exp_dir <- exp(as.matrix(current_dir[, colnames(current_dir) %in% pred_dir]) %*%
 predict_dir <- exp_dir/sum(exp_dir)
 rownames(predict_dir) <- current_dir %>% pull(Name)
 predict_dir
-round(100 * predict_dir, 2)
+round(100 * predict_dir)
 
 # Bootstrap
 n.boot <- 10000

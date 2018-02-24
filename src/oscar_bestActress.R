@@ -203,7 +203,7 @@ exp_actress <- exp(as.matrix(current_actress[, colnames(current_actress) %in% pr
 predict_actress <- exp_actress/sum(exp_actress)
 rownames(predict_actress) <- current_actress %>% pull(Name)
 predict_actress
-round(100 * predict_actress, 2)
+round(100 * predict_actress)
 
 # Bootstrap
 n.boot <- 10000

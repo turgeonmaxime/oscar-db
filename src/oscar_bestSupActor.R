@@ -189,7 +189,7 @@ exp_supactor <- exp(as.matrix(current_supactor[, colnames(current_supactor) %in%
 predict_supactor <- exp_supactor/sum(exp_supactor)
 rownames(predict_supactor) <- current_supactor %>% pull(Name)
 predict_supactor
-round(100 * predict_supactor, 2)
+round(100 * predict_supactor)
 
 # Bootstrap
 n.boot <- 10000
