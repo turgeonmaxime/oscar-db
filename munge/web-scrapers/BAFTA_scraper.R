@@ -1,7 +1,7 @@
 library(rvest)
 is_empty_str <- function(str) str == ""
 
-dataset <- purrr::map_df(1949:2017, function(year) {
+dataset <- purrr::map_df(1949:2018, function(year) {
 	parsed_doc <- read_html(paste0("http://awards.bafta.org/award/",
                                 year, "/film"))
   

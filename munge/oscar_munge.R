@@ -75,7 +75,7 @@ oscar_nominee_2017 <- read_html("https://en.wikipedia.org/wiki/90th_Academy_Awar
         tmp %>%
             mutate(Award = category)
     }) %>% 
-    mutate(Year = "2018", Ceremony = 90)
+    mutate(Year = "2017", Ceremony = 90)
 
 oscar_nominee_2017 %>% 
     saveRDS("cache/oscar_nominees.rds")
